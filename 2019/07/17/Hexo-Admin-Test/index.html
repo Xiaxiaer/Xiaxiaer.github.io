@@ -230,12 +230,14 @@
 <p>下面就会生成你的一些admin的信息，复制到你的blog根目录下的『_config.yml』中。</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hexo-admin authentification</span></span><br><span class="line"><span class="attr">admin:</span></span><br><span class="line"><span class="attr">  username:</span> <span class="string">username</span></span><br><span class="line"><span class="attr">  password_hash:</span> <span class="string">$2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su</span></span><br><span class="line"><span class="attr">  secret:</span> <span class="string">my</span> <span class="string">super</span> <span class="string">secret</span> <span class="string">phrase</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="设置一键部署"><a href="#设置一键部署" class="headerlink" title="设置一键部署"></a>设置一键部署</h1><p>在你的blog目录下新建文件夹『admin_script』,创建一个sh的脚本名为『hexo-generate.sh』，内容如下：</p>
+<h1 id="设置一键部署"><a href="#设置一键部署" class="headerlink" title="设置一键部署"></a>设置一键部署</h1><hr>
+<p>在你的blog目录下新建文件夹『admin_script』,创建一个sh的脚本名为『hexo-generate.sh』，内容如下：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env sh</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g  -d</span><br></pre></td></tr></table></figure>
 
 <p>然后打开之前设置的blog目录下的_config.xml文件，添加一行，添加好的如下：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hexo-admin authentification</span></span><br><span class="line"><span class="attr">admin:</span></span><br><span class="line"><span class="attr">  username:</span> <span class="string">username</span></span><br><span class="line"><span class="attr">  password_hash:</span> <span class="string">$2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su</span></span><br><span class="line"><span class="attr">  secret:</span> <span class="string">my</span> <span class="string">super</span> <span class="string">secret</span> <span class="string">phrase</span></span><br><span class="line"><span class="attr">  deployCommand:</span> <span class="string">'./admin_script/hexo-generate.sh'</span></span><br></pre></td></tr></table></figure>
 
+<p>之后，打开admin的页面，选择『Deploy』,点击『Deploy』按钮，测试是否成功。</p>
 
                 
 
