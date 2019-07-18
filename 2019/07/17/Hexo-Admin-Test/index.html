@@ -14,7 +14,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Hexo-Admin 添加，轻松自在？ - Beantech | 豆科技
+          [Hexo]Hexo-Admin 添加，轻松自在？ - Beantech | 豆科技
         
     </title>
 
@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('')
             /*post*/
         
     }
@@ -90,9 +90,13 @@
                     <div class="post-heading">
                         <div class="tags">
                             
+                              <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
+                            
+                              <a class="tag" href="/tags/#Blog" title="Blog">Blog</a>
+                            
                         </div>
-                        <h1>Hexo-Admin 添加，轻松自在？</h1>
-                        <h2 class="subheading"></h2>
+                        <h1>[Hexo]Hexo-Admin 添加，轻松自在？</h1>
+                        <h2 class="subheading">This is hexo theme Demo.</h2>
                         <span class="meta">
                             Posted by John Doe on
                             2019-07-17
@@ -212,7 +216,26 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p><code>我就试试行不行</code></p>
+                <blockquote>
+<p>听说这个插件可以用来可视化编写、预览、管理hexo搭建的blog，所以今天我就试了一试。</p>
+</blockquote>
+<hr>
+<h1 id="安装使用"><a href="#安装使用" class="headerlink" title="安装使用"></a>安装使用</h1><hr>
+<p>安装且打开admin界面。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blogpath</span><br><span class="line">npm install --save hexo-admin</span><br><span class="line">hexo s -d</span><br><span class="line">open http://localhost:4000/admin</span><br></pre></td></tr></table></figure>
+
+<h1 id="设置用户名密码"><a href="#设置用户名密码" class="headerlink" title="设置用户名密码"></a>设置用户名密码</h1><hr>
+<p>在admin页面中选择『Settings』，点击『Setup authentification here.』。</p>
+<p>设置你的『Username』，『Password』，『Secret』。</p>
+<p>下面就会生成你的一些admin的信息，复制到你的blog根目录下的『_config.yml』中。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hexo-admin authentification</span></span><br><span class="line"><span class="attr">admin:</span></span><br><span class="line"><span class="attr">  username:</span> <span class="string">username</span></span><br><span class="line"><span class="attr">  password_hash:</span> <span class="string">$2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su</span></span><br><span class="line"><span class="attr">  secret:</span> <span class="string">my</span> <span class="string">super</span> <span class="string">secret</span> <span class="string">phrase</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="设置一键部署"><a href="#设置一键部署" class="headerlink" title="设置一键部署"></a>设置一键部署</h1><p>在你的blog目录下新建文件夹『admin_script』,创建一个sh的脚本名为『hexo-generate.sh』，内容如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env sh</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g  -d</span><br></pre></td></tr></table></figure>
+
+<p>然后打开之前设置的blog目录下的_config.xml文件，添加一行，添加好的如下：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hexo-admin authentification</span></span><br><span class="line"><span class="attr">admin:</span></span><br><span class="line"><span class="attr">  username:</span> <span class="string">username</span></span><br><span class="line"><span class="attr">  password_hash:</span> <span class="string">$2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su</span></span><br><span class="line"><span class="attr">  secret:</span> <span class="string">my</span> <span class="string">super</span> <span class="string">secret</span> <span class="string">phrase</span></span><br><span class="line"><span class="attr">  deployCommand:</span> <span class="string">'./admin_script/hexo-generate.sh'</span></span><br></pre></td></tr></table></figure>
+
 
                 
 
@@ -252,7 +275,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#安装使用"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">安装使用</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#设置用户名密码"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">设置用户名密码</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#设置一键部署"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">设置一键部署</span></a></li></ol>
         
         </div>
       </aside>
@@ -272,6 +295,10 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
+                        
+                          <a class="tag" href="/tags/#Blog" title="Blog">Blog</a>
+                        
                     </div>
                 </section>
                 
