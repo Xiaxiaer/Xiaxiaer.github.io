@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          Diu的博客
+        
+    </title>
+
+    <link rel="canonical" href="http://yoursite-url/2019/09/25/-!DOCTYPE html/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('undefined')
+            /*post*/
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/BeanTechSign-white.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                        </div>
+                        <h1></h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by Nianxin Xia on
+                            2019-09-25
+                        </span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">爱玩的Diu</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>&lt;h1 id=”1548336289483”&gt;一、功能列表&lt;/h1&gt;<br>&lt;h2 id=”1548336289483-2”&gt;1.1 响应command&lt;/h2&gt;<br>&lt;p&gt;command是DUI对话过程中通信方式之一，是将控制台与客户端联系在一起的纽带。在对话过程中，你可以通过command信息的定制与响应，实现具体的业务逻辑。&lt;/p&gt;<br>&lt;p&gt;&lt;span style=”font-family: Arial, sans-serif;”&gt;详细的command编写说明，请参见&lt;/span&gt;&lt;a style=”color: #3572b0; background-color: #ffffff; text-decoration-line: none; font-family: Arial, sans-serif;” href=”<a href="https://www.duiopen.com/docs/ct_skill_command&quot;" target="_blank" rel="noopener">https://www.duiopen.com/docs/ct_skill_command&quot;</a> target=”_blank” rel=”noopener”&gt;客户端动作（command）编写说明&lt;/a&gt;&lt;/p&gt;<br>&lt;h3 id=”1548336289483-3”&gt;1.1.1 定制command消息&lt;/h3&gt;<br>&lt;p&gt;command消息形式是字符串形式，具体定制可以通过以下三种方式：&lt;/p&gt;<br>&lt;p&gt;&lt;strong&gt;第一种方式&lt;/strong&gt;：在您已获取的技能（包括自己在控制台&lt;a href=”<a href="https://www.dui.ai/docs/ct_skill&quot;\&gt;创建技能\" target="_blank" rel="noopener">https://www.dui.ai/docs/ct_skill&quot;\&gt;创建技能\</a>&lt;/a&gt;或者内置技能）中可以定制command消息，首先选择技能定制，进入技能列表，再选择开发，如下图：&lt;br /&gt;&lt;img src=”<a href="https://aispeech-dui-doc.oss-cn-hangzhou.aliyuncs.com/images/ct_IOSdetail/iOS%E6%8E%A5%E5%8F%A3%E8%AF%A6%E7%BB%86%E6%8C%87%E5%8D%97-%E6%8A%80%E8%83%BD%E5%BC%80%E5%8F%91.png&quot;" target="_blank" rel="noopener">https://aispeech-dui-doc.oss-cn-hangzhou.aliyuncs.com/images/ct_IOSdetail/iOS%E6%8E%A5%E5%8F%A3%E8%AF%A6%E7%BB%86%E6%8C%87%E5%8D%97-%E6%8A%80%E8%83%BD%E5%BC%80%E5%8F%91.png&quot;</a> alt=”Minion” /&gt;&lt;/p&gt;<br>&lt;p&gt;其次，进入开发技能界面，选择编辑，见下图：&lt;br /&gt; &lt;img src=”<a href="https://aispeech-dui-doc.oss-cn-hangzhou.aliyuncs.com/images/ct_IOSdetail/iOS%E6%8E%A5%E5%8F%A3%E6%83%B3%E8%B5%B7%E6%8C%87%E5%8D%97-%E6%8A%80%E8%83%BD%E5%BC%80%E5%8F%912.png&quot;" target="_blank" rel="noopener">https://aispeech-dui-doc.oss-cn-hangzhou.aliyuncs.com/images/ct_IOSdetail/iOS%E6%8E%A5%E5%8F%A3%E6%83%B3%E8%B5%B7%E6%8C%87%E5%8D%97-%E6%8A%80%E8%83%BD%E5%BC%80%E5%8F%912.png&quot;</a> alt=”Minion” /&gt;&lt;/p&gt;<br>&lt;p&gt;最后，进入任务编辑页面，添加具体说法与定制相关消息（比如command消息，nativeApi消息），command消息定制见下图：&lt;br /&gt; &lt;img src=”<a href="https://aispeech-dui-doc.oss-cn-hangzhou.aliyuncs.com/images/ct_IOSdetail/iOS%E6%8E%A5%E5%8F%A3%E8%AF%A6%E7%BB%86%E6%8C%87%E5%8D%97command.png&quot;" target="_blank" rel="noopener">https://aispeech-dui-doc.oss-cn-hangzhou.aliyuncs.com/images/ct_IOSdetail/iOS%E6%8E%A5%E5%8F%A3%E8%AF%A6%E7%BB%86%E6%8C%87%E5%8D%97command.png&quot;</a> alt=”Minion” /&gt;&lt;/p&gt;<br>&lt;p&gt;&lt;br /&gt;&lt;strong&gt;第二种方式&lt;/strong&gt;：在创建产品-语音内核配置中，进行命令唤醒词配置可定制command消息（见&lt;a href=”<a href="https://www.dui.ai/docs/ct_common_iOS_SDK&quot;\&gt;快速开发指南\" target="_blank" rel="noopener">https://www.dui.ai/docs/ct_common_iOS_SDK&quot;\&gt;快速开发指南\</a>&lt;/a&gt;）。&lt;br /&gt; &lt;br /&gt;&lt;strong&gt;第三种方式&lt;/strong&gt;：在SDK的命令唤醒词接口中，可以定制command消息。&lt;/p&gt;<br>&lt;h3 id=”1548336289483-4”&gt;1.1.2 客户端实现command消息&lt;/h3&gt;<br>&lt;p&gt;当您定制了command消息之后，可以使用如下的方式在您的工程中做实现。&lt;br /&gt; 您可以在需要的地方注册和注销CommandObserver， 同一个CommandObserver可以处理多个commands。&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;command&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;self.commandObserver = <a href>[CommandObserver alloc</a> init];<br>self.commandObserver.delegate = self;</p>
+<p>// 注册以上三种方式定制的command消息<br>NSArray *commandArray = <a href>[NSArray alloc</a> initWithObjects: @”start.player”, @”open.window”, @”open.fridge”, @”open.door”, nil];<br><a href>[DDSManager shareInstance</a> subscribe:commandArray observer:self.commandObserver];</p>
+<p>// 注销以后就不会再响应该对象所注册的所有消息<br><a href>[DDSManager shareInstance</a> unSubscribe:self.commandObserver];</p>
+<p>//响应注册的command消息<br>-(void)onCall:(NSString *)command data:(NSString *)data {</p>
+<p>//第一种方式：响应技能中定制的command消息start.player<br>if(<a href>command isEqualToString:@”start.player”</a>){<br>NSLog(@”响应commmand消息 start.player is successed”);<br>}</p>
+<p>//第二种方式：响应快捷命令唤醒词中定制的command消息open.window，open.fridge<br>if(<a href>command isEqualToString:@”open.window”</a>) {<br>NSLog(@”响应commmand消息 open.window is successed”);<br>}<br>if(<a href>command isEqualToString:@”open.fridge”</a>) {<br>NSLog(@”响应commmand消息 open.fridge is successed”);<br>}</p>
+<p>//第三种方式：响应SDK接口中定制的command消息open.door<br>if(<a href>command isEqualToString:@”open.door”</a>) {<br>NSLog(@”响应commmand消息 open.door is successed”);<br>}<br>}</p>
+<p>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h2 id=”1548336289483-5”&gt;1.2 响应native api&lt;/h2&gt;<br>&lt;p&gt;nativeApi消息形式是字符串形式，可以与&lt;a href=”<a href="https://www.dui.ai/docs/ct_UI&quot;\&gt;UI控件\" target="_blank" rel="noopener">https://www.dui.ai/docs/ct_UI&quot;\&gt;UI控件\</a>&lt;/a&gt;配合起来使用，可以设计个性化界面。nativeApi消息可提供给您使用常见的一些控件。&lt;/p&gt;<br>&lt;h3 id=”1548336289483-6”&gt;1.2.1 nativeApi控件相关接口&lt;/h3&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;文本控件(TextWidget)接口&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;TextWidget * textWidget = <a href>[TextWidget alloc</a> init];</p>
+<p>//设置文本<br><a href>textWidget setText:@”增加textWidget内容”</a>;</p>
+<p>//增加自定义参数的k,v对,可通过配置command参数转发给SDK(注：command和native必须在同一个任务中)<br><a href>textWidget addExtra:@”自定义的key” Value:@”自定义的Value”</a>;</p>
+<p>&lt;/code&gt;&lt;/pre&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;图文卡片控件(ContentWidget)接口&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;ContentWidget * contentWidget = <a href>[ContentWidget alloc</a> init];</p>
+<p>//设置标题<br><a href>contentWidget setTitle:@”设置标题”</a>;</p>
+<p>//设置副标题<br><a href>contentWidget setSubTitle:@”设置副标题”</a>;</p>
+<p>//设置标签<br><a href>contentWidget setLabel:@”设置标签”</a>;</p>
+<p>//设置图片地址<br><a href>contentWidget setImageUrl:@”设置图片资源地址”</a>;</p>
+<p>//设置链接跳转地址<br><a href>contentWidget setLinkUrl:@”设置链接跳转地址”</a>;</p>
+<p>//增加自定义参数的k,v对,可通过配置command参数转发给SDK(注：command和native必须在同一个任务中)<br><a href>contentWidget addExtra:@”phone” Value:@”添加自定义数据”</a>;<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;列表控件(ListWidget)接口&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;ListWidget * listWidget = <a href>[ListWidget alloc</a> init];</p>
+<p>ContentWidget * contentWidget = <a href>[ContentWidget alloc</a> init];<br><a href>contentWidget setTitle:@”设置列表第一行标题”</a>;<br><a href>contentWidget addExtra:@”phone” Value:@”添加自定义数据”</a>;</p>
+<p>//添加到控件，作为列表控件第一行内容<br><a href>listWidget addContentWidget:contentWidget</a>;</p>
+<p>//增加自定义参数的k,v对,可通过配置command参数转发给SDK(注：command和native必须在同一个任务中)<br><a href>listWidget addExtra:@”自定义的key” Value:@”自定义的Value”</a>;</p>
+<p>&lt;/code&gt;&lt;/pre&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;媒体控件(MediaWidget)接口&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;MediaWidget * mediaWidget = <a href>[MediaWidget alloc</a> init];<br>ContentWidget * contentWidget = <a href>[ContentWidget alloc</a> init];<br><a href>contentWidget setTitle:@”设置标题”</a>;<br><a href>contentWidget addExtra:@”phone” Value:@”添加自定义数据”</a>;</p>
+<p>//添加到MediaWidget中<br><a href>mediaWidget addContentWidget:contentWidget</a>;</p>
+<p>//增加自定义参数的k,v对,可通过配置command参数转发给SDK(注：command和native必须在同一个任务中)<br><a href>mediaWidget addExtra:@”自定义的key” Value:@”自定义的Value”</a>;<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;内嵌网页控件(WebWidget)接口&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;WebWidget * webWidget = <a href>[WebWidget alloc</a> init];</p>
+<p>//设置url地址<br><a href>webWidget setUrl:@”设置url地址”</a>;</p>
+<p>//增加自定义参数的k,v对,可通过配置command参数转发给SDK(注：command和native必须在同一个任务中)<br><a href>webWidget addExtra:@”自定义的key” Value:@”自定义的Value”</a>;</p>
+<p>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-7”&gt;1.2.2 定制nativeApi消息&lt;/h3&gt;<br>&lt;p&gt;定制nativeApi消息与第一种方式定制command消息类似，直到进入任务编辑页面，不同之处在于，nativeApi消息定制必须手动加上前缀native://，此外还应选择必要的控件形式、类型等。若您还须要额外的参数，可以通过API配置进行参数配置。具体见下图：&lt;br /&gt; &lt;br /&gt;&lt;img src=”<a href="https://aispeech-dui-doc.oss-cn-hangzhou.aliyuncs.com/images/ct_IOSdetail/iOS%E6%8E%A5%E5%8F%A3%E8%AF%A6%E7%BB%86%E6%8C%87%E5%8D%97-%E6%8E%A7%E4%BB%B6%E8%B5%84%E6%BA%90.png&quot;" target="_blank" rel="noopener">https://aispeech-dui-doc.oss-cn-hangzhou.aliyuncs.com/images/ct_IOSdetail/iOS%E6%8E%A5%E5%8F%A3%E8%AF%A6%E7%BB%86%E6%8C%87%E5%8D%97-%E6%8E%A7%E4%BB%B6%E8%B5%84%E6%BA%90.png&quot;</a> alt=”Minion” /&gt;&lt;/p&gt;<br>&lt;h3 id=”1548336289483-8”&gt;1.2.3 客户端实现nativeApi消息&lt;/h3&gt;<br>&lt;p&gt;当您在DUI平台上定制了native api之后，可以使用如下的方式在您的工程中做实现：&lt;/p&gt;<br>&lt;p&gt;您可以在需要的地方注册和注销NativeApiObserver，同一个NativeApiObserver可以处理多个native api。&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;self.nativeApiObserver = <a href>[NativeApiObserver alloc</a> init];<br>self.nativeApiObserver.delegate = self;</p>
+<p>// 注册您定制的nativeApi消息<br> NSArray *nativeApiArray = <a href>[NSArray alloc</a> initWithObjects:@”sys.query.contacts”, nil];<br> <a href>[DDSManager shareInstance</a> subscribe:nativeApiArray observer:self.nativeApiObserver];</p>
+<p>// 注销以后就不会再响应该对象索注册的所有消息<br><a href>[DDSManager shareInstance</a> unSubscribe:self.nativeApiObserver];</p>
+<p>//响应注册的nativeApi消息，并调用feedbackNativeApiResult响应服务端，否则会导致native api超时<br>-(void)onQuery:(NSString *)nativeApi data:(NSString *)data {<br>if(<a href>nativeApi isEqualToString:@”sys.query.contacts”</a>) {<br>NSLog(@”响应nativeApi消息 sys.query.contacts is successed”);</p>
+<p>//定义列表控件，具体使用参考控件相关接口<br>ListWidget * listWidget = <a href>[ListWidget alloc</a> init];</p>
+<p>ContentWidget * contentWidget = <a href>[ContentWidget alloc</a> init];<br><a href>contentWidget setTitle:@”设置列表第一行标题”</a>;<br><a href>contentWidget setSubTitle:@”设置列表第一行子标题”</a>;<br><a href>contentWidget addExtra:@”phone” Value:@”添加自定义数据”</a>;</p>
+<p>//添加到控件，作为列表控件第一行内容<br><a href>listWidget addContentWidget:contentWidget</a>;</p>
+<p>///向DUI平台返回结果，此时控件类型取决于定制nativeApi消息时所选择的控件类型，自定义控件可以选择DuiWidget类型<br><a href>[DDSManager shareInstance</a> feedbackNativeApiResult:nativeApi duiWidget:listWidget];<br>}<br>}</p>
+<p>&lt;/code&gt;&lt;/pre&gt;<br>&lt;ul&gt;<br>&lt;li&gt;每个onQuery方法执行时，需要调用feedbackNativeApiResult来向DUI平台返回执行结果，表示一个native api执行结束；&lt;/li&gt;<br>&lt;li&gt;native api的执行超时时间为10s。&lt;/li&gt;<br>&lt;/ul&gt;<br>&lt;h2 id=”1548336289483-9”&gt;1.3 响应message消息&lt;/h2&gt;<br>&lt;p&gt;message消息无须您主动定制，此类消息是DUI主动发送给您的。您可以在客户端注册您所关注的消息，并且可以实现特定的业务逻辑。&lt;/p&gt;<br>&lt;h3 id=”1548336289483-10”&gt;1.3.1 message消息列表:&lt;/h3&gt;<br>&lt;table&gt;<br>&lt;thead&gt;<br>&lt;tr&gt;<br>&lt;th&gt;message&lt;/th&gt;<br>&lt;th&gt;data&lt;/th&gt;<br>&lt;th&gt;说明&lt;/th&gt;<br>&lt;/tr&gt;<br>&lt;/thead&gt;<br>&lt;tbody&gt;<br>&lt;tr&gt;<br>&lt;td&gt;sys.dialog.start&lt;/td&gt;<br>&lt;td&gt;{&lt;br /&gt;reason:”wakeup.major”,//唤醒词触发对话&lt;br /&gt;}&lt;/td&gt;<br>&lt;td&gt;对话开始，及开始原因：1.wakeup.major，唤醒词唤醒2.wakeup.command，快捷命令唤醒3.api.startDialog，调用startDialog接口4.api.sendText，调用sendText接口（对话Idle时）5.api.triggerIntent，调用triggerIntent接口（对话Idle时）6.api.avatarClick，调用avatarClick接口（对话Idle时）7.api.avatarPress，调用avatarPress接口（对话Idle时）&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;sys.dialog.end&lt;/td&gt;<br>&lt;td&gt;{&lt;br /&gt;reason:”normal”,//对话正常结束&lt;br /&gt; skillId:”100001246”&lt;br /&gt;}&lt;br /&gt;{ reason:”error”,//对话发生错误；&lt;br /&gt;errId:071304,&lt;br /&gt;errMsg:”asr null”, skillId:”trySkillId”&lt;br /&gt;}&lt;br /&gt;{&lt;br /&gt;reason:”interrupt”,//对话被打断。强制结束对话时出现。&lt;br /&gt;skillId:”100001246”&lt;br /&gt;}&lt;br /&gt; {&ldquo;reason&rdquo;:”normal&rdquo;}//快捷唤醒词返回结果&lt;/td&gt;<br>&lt;td&gt;对话结束，及结束原因：&lt;br /&gt;1.normal，对话正常结束&lt;br /&gt;2.error，对话发生错误退出&lt;br /&gt;3.interrupt，对话被打断退出&lt;br /&gt;4.快捷唤醒词返回结果&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;sys.dialog.error&lt;/td&gt;<br>&lt;td&gt;{&lt;br /&gt;errId:071304,&lt;br /&gt;errMsg:”asr null”,&lt;br /&gt;“recordId”:”f71de62c59efca802e23dac3a8b0e526”&lt;br /&gt;}&lt;/td&gt;<br>&lt;td&gt;对话中发生的错误&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;sys.dialog.continue&lt;/td&gt;<br>&lt;td&gt;无&lt;/td&gt;<br>&lt;td&gt;对话恢复&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;speak.end（已废弃）&lt;/td&gt;<br>&lt;td&gt;ttsId&lt;/td&gt;<br>&lt;td&gt;speak播报结束&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;sys.wakeup.result&lt;/td&gt;<br>&lt;td&gt;{&lt;br /&gt;“type”: “major”,&lt;br /&gt;“word”: “你好小驰”,&lt;br /&gt;“greeting”:”主人你好”&lt;br /&gt;}&lt;/td&gt;<br>&lt;td&gt;语音唤醒仅当K_WAKEUP_ROUTER被设置为”partner”时触发&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;sys.vad.begin&lt;/td&gt;<br>&lt;td&gt;无&lt;/td&gt;<br>&lt;td&gt;VAD触发&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;sys.vad.end&lt;/td&gt;<br>&lt;td&gt;无&lt;/td&gt;<br>&lt;td&gt;VAD结束&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;sys.upload.result&lt;/td&gt;<br>&lt;td&gt;//失败&lt;br /&gt;{&lt;br /&gt;“result”:false,&lt;br /&gt;“reqId”:”xxxx”,&lt;br /&gt;“errId”:71801,&lt;br /&gt;“errMsg”:”Network Invalid”&lt;br /&gt;}&lt;br /&gt;//成功&lt;br /&gt;{&lt;br /&gt;“result”:true,&lt;br /&gt;“result”:true,&lt;br /&gt;}&lt;/td&gt;<br>&lt;td&gt;上传词库、设备信息的结果&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;/tbody&gt;<br>&lt;/table&gt;<br>&lt;h3 id=”1548336289483-11”&gt;1.3.2 客户端实现message消息&lt;/h3&gt;<br>&lt;p&gt;您可以在需要的地方注册和注销MessageObserver，同一个MessageObserver可以处理多个message。&lt;/p&gt;<br>&lt;p&gt;您可以通过注册消息接收器来接收需要UI展示的数据，具体UI消息数据见:&lt;a href=”<a href="https://www.dui.ai/docs/ct_UI&quot;\&gt;UI" target="_blank" rel="noopener">https://www.dui.ai/docs/ct_UI&quot;\&gt;UI</a> 事件及数据定义&lt;/a&gt;&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;message&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;self.messageObserver = <a href>[MessageObserver alloc</a> init];<br>self.messageObserver.delegate = self;<br>// 注册您关注的message消息<br>NSArray *messageArray = <a href>[NSArray alloc</a> initWithObjects:@”avatar.silence”, @”avatar.listening”, @”avatar.understanding”, @”avatar.speaking”, @”sys.dialog.start”, @”sys.dialog.end”, @”context.input.text”,nil];<br><a href>[DDSManager shareInstance</a> subscribe:messageArray observer:self.messageObserver];</p>
+<p>// 注销以后就不会再响应该对象所注册的所有消息<br><a href>[DDSManager shareInstance</a> unSubscribe:self.messageObserver];</p>
+<p>//响应您注册的message消息<br>-(void)onMessage:(NSString <em>)message  data:(NSString</em>)data {<br>if (<a href>message isEqualToString:@”sys.dialog.start”</a>) {<br>NSLog(@”对话开始了”);<br>}<br>if (<a href>message isEqualToString:@”context.input.text”</a>) {<br>NSLog(@”用户输入数据”);<br>}<br>}<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h2 id=”1548336289483-12”&gt;1.4 内置H5&lt;/h2&gt;<br>&lt;p&gt;您如果使用和上传了h5资源，可以通过以下方法来获取h5资源包的index.html文件的路径用来在webview中加载。&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;H5&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;// 获取资源包中h5的index.html文件的绝对路径<br><a href>[DDSManager shareInstance</a> getValidH5Path];<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h2 id=”1548336289483-13”&gt;1.5 开启/终止对话&lt;/h2&gt;<br>&lt;p&gt;您可以在任何时刻主动开启/终止对话，通过以下接口实现。（消息监听参照 1.3.1 message消息列表，开启对话有提示音）&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;dialog&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//开启对话<br><a href>[DDSManager shareInstance</a> startDialog];<br>//停止对话<br><a href>[DDSManager shareInstance</a> stopDialog];<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h2 id=”1548336289483-14”&gt;1.6 外部引擎相关接口&lt;/h2&gt;<br>&lt;h3 id=”1548336289483-15”&gt;1.6.1 外部录音机拾音&lt;/h3&gt;<br>&lt;p&gt;您如果有自己的录音机，可以通过以下方法将录音数据传给DDS。(注：注明下每次传送的数据不能超过3200字节)&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;external recorder&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//注册<br><a href>paramDic setObject:@”external” forKey:K_RECORDER_MODE</a>;</p>
+<p>//发送录音数据给DDS<br><a href>[DDSManager shareInstance</a> feedPcm:data];<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-16”&gt;1.6.2 外部TTS引擎&lt;/h3&gt;<br>&lt;p&gt;您如果使用第三方的TTS引擎，可以通过以下方法来将第三方TTS引擎注册到DDS中。&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//SDK初始化时注册  实现代理方法<br><a href>paramDic setObject:@”external” forKey:K_TTS_MODE</a>;</p>
+<p>//须要合成的回调接口<br>-(void)onStart:(NSString *)type data:(NSString *)content{<br>NSLog(@”AITtsExNode : tts start”);<br>}<br>//打断播报的回调接口<br>-(void)onStop{<br>NSLog(@”AITtsExNode : tts stop”);<br>}</p>
+<p>// 播报结束通知,第三方引擎播报完后需要调用，通知SDK已播报结束<br><a href>[DDSManager shareInstance</a> notifyTTSEnd];<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h2 id=”1548336289483-17”&gt;1.7 设置场景模式&lt;/h2&gt;<br>&lt;p&gt;如果您期望在某些场景下让SDK保持静音，同时又可以进行对话等操作，可以在需要的时候调用下面的接口。&lt;br /&gt; &lt;strong&gt;DDSMode&lt;/strong&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//设置为正常模式<br> <a href>[DDSManager shareInstance</a> setDDSMode:1];</p>
+<p>//设置为静音模式<br><a href>[DDSManager shareInstance</a> setDDSMode:0];<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h2 id=”1548336289483-18”&gt;1.8 触发场景意图&lt;/h2&gt;<br>&lt;p&gt;如果您期望主动触发某个意图的对话，可以在需要的时候调用下面的接口。&lt;/p&gt;<br>&lt;p&gt;参数说明：&lt;br /&gt; 1）skill 技能名称，必填。&lt;br /&gt; 2）task 任务名称，必填。&lt;br /&gt; 3）intent 意图名称，必填。&lt;br /&gt; 4）slots 语义槽的key-value，可选。&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;triggerIntent&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//跳过识别和语义，直接进入指定的意图对话。即：DDS主动向用户发起一轮对话。<br> NSMutableDictionary *arrDic = <a href>[NSMutableDictionary alloc</a> init];<br> <a href>arrDic setObject:@”xxx” forKey:@”电影人”</a>;<br> <a href>arrDic setObject:@”语义槽取值” forKey:@”语义槽名称”</a>;<br> <a href>[DDSManager shareInstance</a> triggerIntent:@”skillx” task:@”TestNative” intent:@”xx” slots:arrDic];<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h2 id=”1548336289483-19”&gt;1.9 更新用户词库&lt;/h2&gt;<br>&lt;p&gt;如果您期望更新用户的词库，使其能在技能中使用，可以在需要的时候调用下面的接口，更新结果可以通过sys.upload.result消息来获取。&lt;/p&gt;<br>&lt;p&gt;返回请求ID，用于追踪sys.upload.result。&lt;/p&gt;<br>&lt;p&gt;sys.upload.result 消息需要通过message订阅。&lt;/p&gt;<br>&lt;p&gt;&lt;strong&gt;参数说明：&lt;/strong&gt;&lt;/p&gt;<br>&lt;p&gt;1）vocabName词库名称，必填。若上传的词库是sys.联系人，则会自动做分词处理。&lt;br /&gt; 2）contents 词条，必填。若需要上传带同义词的词条，格式如下：”${词条取值}:${同义词1}<a href>,${同义词2}</a>“。&lt;br /&gt; 3）addOrDelete 新增(YES)还是删除(NO)，必填。&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;updateVocab&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//实时更新用户词库<br> NSMutableArray *arr = <a href>[NSMutableArray alloc</a>init];<br> <a href>arr addObject:@”星期日:礼拜天”</a>;<br> <a href>arr addObject:@”节假日:假期”</a>;<br> <a href>arr addObject:@”电灯:电灯泡,灯泡”</a>;<br>NSString * reqId = <a href>[DDSManager shareInstance</a>updateVocab:@”我的节日” contents:arr addOrDelete:YES];</p>
+<p>//实时更新联系人词库<br> NSMutableArray *arr = <a href>[NSMutableArray alloc</a>init];<br> <a href>arr addObject:@”张三”</a>;<br> <a href>arr addObject:@”李四”</a>;<br>NSString * reqId = <a href>[DDSManager shareInstance</a>updateVocab:@”sys.联系人” contents:arr addOrDelete:YES];<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h2 id=”1548336289483-20”&gt;1.10 输入文本&lt;/h2&gt;<br>&lt;p&gt;如果您期望跳过识别直接输入文本进行对话，可以在需要的时候调用下面的接口。&lt;/p&gt;<br>&lt;p&gt;若当前没有在对话中，则以文本作为首轮说法，新发起一轮对话请求。&lt;br /&gt; 若当前正在对话中，则跳过识别，直接发送文本。&lt;/p&gt;<br>&lt;p&gt;&lt;strong&gt;参数说明：&lt;/strong&gt;&lt;/p&gt;<br>&lt;p&gt;1）text 输入的文本内容&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;sendText&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//输入文本<br><a href>[DDSManager shareInstance</a> sendText:@”一加一等于几”];<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h2 id=”1548336289483-21”&gt;1.11 设置VAD相关参数&lt;/h2&gt;<br>&lt;h3 id=”1548336289483-23”&gt;1.11.1 设置VAD后端停顿时间&lt;/h3&gt;<br>&lt;p&gt;如果您期望修改VAD后端检测的时间，可以在需要的时候调用下面的接口。&lt;/p&gt;<br>&lt;p&gt;&lt;strong&gt;参数说明：&lt;/strong&gt;&lt;/p&gt;<br>&lt;p&gt;1）millis 后端检测时间，单位毫秒，默认500毫秒。即若VAD在用户说话时停顿超过一定的时间，则认为用户已经说完，发出sys.vad.end消息，结束录音。&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;setVadPauseTime&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//设置VAD后端停顿时间<br><a href>[DDSManager shareInstance</a> setVadPauseTime:1000];</p>
+<p>//获取VAD后端停顿时间<br>long pause = <a href>[DDSManager shareInstance</a> getVadPauseTime];<br>NSLog(@”pauseTime is %ld”, pause);<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-23”&gt;1.11.2 设置/获取VAD前端静音检测超时时间&lt;/h3&gt;<br>&lt;p&gt;/<em>*&lt;/p&gt;<br>&lt;p&gt;&nbsp;设置VAD前端超时时间的接口&lt;/p&gt;<br>&lt;p&gt;&nbsp;@param&nbsp;mills 前端超时时间，单位为毫秒。默认值为8000毫秒。&lt;/p&gt;<br>&lt;p&gt;&nbsp;</em>/&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;span style=”font-weight: 600;”&gt;setVadTimeOut&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//设置VAD前端超时时间的接口<br><a href>[[DDSManager shareInstance</a> getASRInstance] setVadTimeout:9000];</p>
+<p>//获取VAD前端超时时间的接口<br>long timeOut = <a href>[[DDSManager shareInstance</a> getASRInstance] getVadTimeout];&lt;/code&gt;&lt;/pre&gt;<br>&lt;h2 id=”1548336289483-22”&gt;1.12 数据上传接口&lt;/h2&gt;<br>&lt;p&gt;开发者调用此接口来上传一些设备的信息，这些信息可以在本地使用，也可以在对话中获取，作为对话决策的一部分。&lt;/p&gt;<br>&lt;h3 id=”1548336289483-23”&gt;1.12.1 更新设备、产品级配置信息&lt;/h3&gt;<br>&lt;p&gt;/<em>!&lt;/p&gt;<br>&lt;p&gt;更新设备状态，产品级的配置，比如：定位信息，设备硬件状态等，在SDK中需要设置AIUpdateContextIntent对象属性。&lt;/p&gt;<br>&lt;p&gt;更新结果可以通过sys.upload.result消息来获取。&lt;/p&gt;<br>&lt;p&gt;@param intent 请求的AIUpdateContextIntent对象，包括contextIntentKey和contextIntentValue；&lt;/p&gt;<br>&lt;blockquote&gt;<br>&lt;p&gt;如：contextIntentKey = @”location”, contextIntentValue = @{@”city”:@”苏州市”}。&lt;br /&gt; 技能里通过context.system.settings.location.city即可获取到”苏州市”。&lt;/p&gt;<br>&lt;/blockquote&gt;<br>&lt;p&gt;@return 请求的ID，用于追踪sys.upload.result。&lt;/p&gt;<br>&lt;p&gt;</em>/&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;updateProductContext&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;    AIUpdateContextIntent * intent = <a href>[AIUpdateContextIntent alloc</a> init];<br>intent.contextIntentKey = @”bluetooth”;<br>intent.contextIntentValue = @{@”state”:@”disconnected”};</p>
+<p>//更新设备信息<br><a href>[DDSManager shareInstance</a> updateProductContext:intent];</p>
+<p>//获取设备信息<br>NSObject <em>obj = <a href>[DDSManager shareInstance</a> getProductContext:@”bluetooth”];<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-24”&gt;1.12.2 更新技能配置信息&lt;/h3&gt;<br>&lt;p&gt;/</em>!&lt;/p&gt;<br>&lt;p&gt;更新技能配置，需要设置AIUpdateContextIntent对象属性。&lt;/p&gt;<br>&lt;p&gt;更新结果可以通过sys.upload.result消息来获取。&lt;/p&gt;<br>&lt;p&gt;@param intent 请求的AIUpdateContextIntent对象，包括contextIntentKey、contextIntentValue、contextIntentSkillId；&lt;/p&gt;<br>&lt;blockquote&gt;<br>&lt;p&gt;如：contextIntentKey = @”music”，contextIntentValue = @{@”state”:@”closed”，contextIntentSkillId = @”100000285”;&lt;br /&gt; 该技能里通过context.skill.settings.music.state即可获取到”closed”，其他技能则无法使用。&lt;/p&gt;<br>&lt;/blockquote&gt;<br>&lt;p&gt;@return 请求的ID，用于追踪sys.upload.result。&lt;/p&gt;<br>&lt;p&gt;*/&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;updateSkillContext&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;    AIUpdateContextIntent * intent = <a href>[AIUpdateContextIntent alloc</a> init];<br>intent.contextIntentKey = @”music”;<br>intent.contextIntentValue = @{@”state”:@”closed”};<br>intent.contextIntentSkillId = @”100000285”;</p>
+<p>//更新技能配置信息<br><a href>[DDSManager shareInstance</a> updateSkillContext:intent];</p>
+<p>//获取技能配置信息<br>NSObject <em>obj = <a href>[DDSManager shareInstance</a> getSkillContext:@”100000285” key:@”music” ];<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-24”&gt;1.12.3 更新热词识别接口(请求级别)&lt;/h3&gt;<br>&lt;p&gt;/**&lt;/p&gt;<br>&lt;p&gt;&nbsp;更新热词识别接口(请求级别)&lt;/p&gt;<br>&lt;p&gt;&nbsp;每次请求都会带上热词词库, 例如: <a href>{“type”: “vocab”, “name”: “行政区”, “data”:[“黄浦区”</a>}]&lt;/p&gt;<br>&lt;p&gt;&nbsp;本接口为覆盖式接口,以最新设置为准,如需要清除请求，data置为空即可。&lt;/p&gt;<br>&lt;p&gt;&nbsp;@param&nbsp;phraseHints phraseHints 需要更新的热词识别列表&lt;/p&gt;<br>&lt;p&gt;&nbsp;</em>/&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;span style=”font-weight: 600;”&gt;updatePhraseHints&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;AIPhraseHintsIntent *intent = <a href>[AIPhraseHintsIntent alloc</a> init];<br>//类型<br>intent.type = @”vocab”;<br>//词库名称<br>intent.name = @”sys.联系人”;<br>//更新的数据<br>intent.data = <a href>[NSMutableArray alloc</a>initWithObjects:@”张三”,@”李四”, nil];<br>NSArray *phraseHints = <a href>[NSArray alloc</a>initWithObjects:intent, nil];<br><a href>[DDSManager shareInstance</a> updatePhraseHints:phraseHints];&lt;/pre&gt;<br>&lt;h2 id=”1548336289483-25”&gt;1.13 唤醒相关接口&lt;/h2&gt;<br>&lt;h3 id=”1548336289483-26”&gt;1.13.1 开关唤醒&lt;/h3&gt;<br>&lt;p&gt;默认SDK加载后不会启动语音唤醒，您可以通过以下接口对需对语音唤醒进行控制：&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;wakeup&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;// 开启语音唤醒<br><a href>[DDSManager shareInstance</a> enableWakeup];</p>
+<p>// 关闭语音唤醒<br><a href>[DDSManager shareInstance</a> disableWakeup];</p>
+<p>// 获取唤醒词列表<br><a href>[DDSManager shareInstance</a> getWakeupWords];<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-27”&gt;1.13.2 更新主唤醒词&lt;/h3&gt;<br>&lt;p&gt;若想增加或移除主唤醒词，那么您可以调用如下接口设置主唤醒词，具体参数如下：&lt;/p&gt;<br>&lt;p&gt;/<em>!&lt;/p&gt;<br>&lt;p&gt;添加主唤醒词的接口,支持添加多个主唤醒词，调用此接口会覆盖控制台配置的主唤醒词，直到通过removeMainWakeupWord接口移除，如果移除了所有通过addMainWakeupWord接口添加的主唤醒词，则主唤醒词重置为控制台所配置的。&lt;/p&gt;<br>&lt;p&gt;@param words 主唤醒词，不为nil；&lt;/p&gt;<br>&lt;p&gt;@param pinyin 主唤醒词的拼音，不为nil；&lt;/p&gt;<br>&lt;p&gt;@param threshold 主唤醒词的阈值，不为nil；&lt;/p&gt;<br>&lt;p&gt;@param greetings 主唤醒词的欢迎语，不为nil；如果某个唤醒词不想要欢迎语，在对应的维度设为NULL。&lt;/p&gt;<br>&lt;p&gt;</em>/&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;setMainWakeup&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;NSMutableArray * arrayWords = <a href>[NSMutableArray alloc</a> init];<br> <a href>arrayWords addObject:@”你好小鹏”</a>;<br> <a href>arrayWords addObject:@”你好小龙”</a>;<br> NSMutableArray * arrayPinyins = <a href>[NSMutableArray alloc</a> init];<br> <a href>arrayPinyins addObject:@”ni hao xiao peng”</a>;<br> <a href>arrayPinyins addObject:@”ni hao xiao long”</a>;<br> NSMutableArray * arrayThresholds = <a href>[NSMutableArray alloc</a> init];<br> <a href>arrayThresholds addObject:@”0.124”</a>;<br> <a href>arrayThresholds addObject:@”0.125”</a>;<br> NSMutableArray * arrayGreetings = <a href>[NSMutableArray alloc</a> init];<br> <a href>arrayGreetings addObject:@[@”小鹏来了”</a>];<br> <a href>arrayGreetings addObject:@[@”小龙来了”, @”小龙在此”</a>];</p>
+<p>//增加主唤醒词<br><a href>[[DDSManager shareInstance</a> getDDSWakeupEngineManager] addMainWakeupWord:arrayWords pinyin:arrayPinyins threshold:arrayThresholds greetings:arrayGreetings];</p>
+<p>//移除主唤醒词<br><a href>[[DDSManager shareInstance</a> getDDSWakeupEngineManager] removeMainWakeupWord:arrayWords];<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-28”&gt;1.13.3 更新副唤醒词&lt;/h3&gt;<br>&lt;p&gt;如果您期望为设备增加一个副唤醒词，可以在需要的时候调用下面的接口。&lt;/p&gt;<br>&lt;p&gt;&lt;strong&gt;参数说明：&lt;/strong&gt;&lt;/p&gt;<br>&lt;p&gt;1）word 副唤醒词（必须）。若不填，则清空当前的副唤醒词。&lt;br /&gt; 2）pinyin 副唤醒词的拼音（可选）。若不填，则自动估算。&lt;br /&gt; 3）threshold 副唤醒词的阈值（可选）。若不填，则自动估算。&lt;br /&gt; 4）greetings 副唤醒词的欢迎语（可选）。若不填，则与主唤醒词保持一致。&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//实时更新副唤醒词<br>NSMutableArray *arr = <a href>[NSMutableArray alloc</a> init];<br><a href>arr addObject:@”小明在此”</a>;<br><a href>arr addObject:@”来了来了”</a>;<br><a href>[DDSManager shareInstance</a> updateMinorWakeupWord:@”你好小明” pinyin:@”ni hao xiao ming” threshold:@”0.127” greetings:arr];</p>
+<p>//获取当前的副唤醒词<br>NSString * minWakeupWords = <a href>[[DDSManager shareInstance</a> getDDSWakeupEngineManager] getMinorWakeupWord];<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-29”&gt;1.13.4 更新命令唤醒词&lt;/h3&gt;<br>&lt;p&gt;如果您期望在唤醒的时候执行一条指令，可以在需要的时候调用下面的接口。命令唤醒词和DUI控制台所设置的快捷唤醒词是相同的功能，且互不影响，可同时存在，根据需求来选择设置方式。&lt;/p&gt;<br>&lt;p&gt;&lt;strong&gt;参数说明：&lt;/strong&gt;&lt;/p&gt;<br>&lt;p&gt;1）actions 命令唤醒词指令，为NSMutableArray&lt;NSString<em>&gt;数组，至少有一个元素（此类元素就是定制的command消息（例如：open.window，open.door），该消息可以分别在客户端进行注册，以及响应。&lt;/p&gt;<br>&lt;p&gt;2）words 命令唤醒词， 为NSMutableArray&lt;NSString</em>&gt;数组，至少有一个元素。&lt;/p&gt;<br>&lt;p&gt;3）pinyins 命令唤醒词的拼音，形如：ni hao xiao chi, 为NSMutableArray&lt;NSString<em>&gt;数组，至少有一个元素。&lt;/p&gt;<br>&lt;p&gt;4）thresholds 命令唤醒词的阈值, 形如：0.120(取值范围：0-1)。为NSMutableArray&lt;NSString</em>&gt;数组,至少有一个元素。&lt;/p&gt;<br>&lt;p&gt;5）greetings 命令唤醒词的欢迎语, 为NSMutableArray&lt;NSMutableArray&lt;NSString<em>&gt;</em>&gt;数组,至少有一个元素, 每维对应一个唤醒词的欢迎语。&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;updateCommandWakeupWord&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;NSMutableArray * arrayAction = <a href>[NSMutableArray alloc</a> init];<br> <a href>arrayAction addObject:@”open.window”</a>;<br> <a href>arrayAction addObject:@”open.door”</a>;<br> NSMutableArray * arrayWords = <a href>[NSMutableArray alloc</a> init];<br> <a href>arrayWords addObject:@”打开窗户”</a>;<br> <a href>arrayWords addObject:@”打开门”</a>;<br> NSMutableArray * arrayPinyins = <a href>[NSMutableArray alloc</a> init];<br> <a href>arrayPinyins addObject:@”da kai chuang hu”</a>;<br> <a href>arrayPinyins addObject:@”da kai men”</a>;<br> NSMutableArray * arrayThresholds = <a href>[NSMutableArray alloc</a> init];<br> <a href>arrayThresholds addObject:@”0.124”</a>;<br> <a href>arrayThresholds addObject:@”0.125”</a>;<br> NSMutableArray * arrayGreetings = <a href>[NSMutableArray alloc</a> init];<br> <a href>arrayGreetings addObject:@[@”窗户打开了”, @”开了开了”</a>];<br> <a href>arrayGreetings addObject:@[@”门打开了”, @”好了好了”</a>];</p>
+<p>//实时更新命令唤醒词<br> <a href>[[DDSManager shareInstance</a> getDDSWakeupEngineManager] updateCommandWakeupWord:arrayAction words:arrayWords pinyin:arrayPinyins threshold:arrayThresholds greetings:arrayGreetings];</p>
+<p>//清空当前设置的命令唤醒词<br><a href>[[DDSManager shareInstance</a> getDDSWakeupEngineManager] clearCommandWakeupWord];</p>
+<p>//添加指定的命令唤醒词组<br><a href>[[DDSManager shareInstance</a> getDDSWakeupEngineManager] addCommandWakeupWord:arrayAction words:arrayWords pinyin:arrayPinyins threshold:arrayThresholds greetings:arrayGreetings];</p>
+<p>//移除指定的命令唤醒词组<br><a href>[[DDSManager shareInstance</a> getDDSWakeupEngineManager] removeCommandWakeupWord:arrayWords];<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-30”&gt;1.13.5 更新打断唤醒词&lt;/h3&gt;<br>&lt;p&gt;如果您期望在唤醒的时候能同时打断语音播报，可以在需要的时候调用下面的接口。打断唤醒词暂不支持在DUI控制台设置。（说明：打断需要设备开启回声消除）&lt;/p&gt;<br>&lt;p&gt;&lt;strong&gt;参数说明：&lt;/strong&gt;&lt;/p&gt;<br>&lt;p&gt;/<em>!&lt;/p&gt;<br>&lt;p&gt;更新打断唤醒词的接口，这类唤醒词能打断正在播报的语音并且将唤醒词送入识别。&lt;/p&gt;<br>&lt;p&gt;支持设置多个打断唤醒词，所以参数为数组，重复调用会以最新的打断唤醒词数组为准。&lt;/p&gt;<br>&lt;p&gt;&lt;br /&gt; @param words 打断唤醒词，为NSString数组，必须。&lt;/p&gt;<br>&lt;p&gt;&lt;br /&gt; @param pinyin 打断唤醒词的拼音, 形如：ni hao xiao chi，为NSString数组，必须。&lt;/p&gt;<br>&lt;p&gt;&lt;br /&gt; @param threshold 打断唤醒词的阈值，形如：0.120(取值范围：0-1) 为NString数组，必须。&lt;/p&gt;<br>&lt;p&gt;</em>/&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;ShortcutWakeupWord&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;NSMutableArray * arrayWords = <a href>[NSMutableArray alloc</a> init];<br> <a href>arrayWords addObject:@”小驰小驰”</a>;<br> <a href>arrayWords addObject:@”你好小驰”</a>;<br> NSMutableArray * arrayPinyins = <a href>[NSMutableArray alloc</a> init];<br> <a href>arrayPinyins addObject:@”xiao chi xiao chi”</a>;<br> <a href>arrayPinyins addObject:@”ni hao xiao chi”</a>;<br> NSMutableArray * arrayThresholds = <a href>[NSMutableArray alloc</a> init];<br> <a href>arrayThresholds addObject:@”0.124”</a>;<br> <a href>arrayThresholds addObject:@”0.125”</a>;</p>
+<p>//更新打断唤醒词<br> <a href>[[DDSManager shareInstance</a> getDDSWakeupEngineManager] updateShortcutWakeupWord:arrayWords pinyin:arrayPinyins threshold:arrayThresholds];</p>
+<p>//清空打断唤醒词<br><a href>[[DDSManager shareInstance</a> getDDSWakeupEngineManager] clearShortCutWakeupWord];</p>
+<p>//添加指定的打断唤醒词组<br><a href>[[DDSManager shareInstance</a> getDDSWakeupEngineManager] addShortcutWakeupWord:arrayWords pinyin:arrayPinyins threshold:arrayThresholds];</p>
+<p>//移除指定的打断唤醒词组<br><a href>[[DDSManager shareInstance</a> getDDSWakeupEngineManager] removeShortcutWakeupWord:arrayWords];<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h2 id=”1548336289483-31”&gt;1.14 识别相关接口&lt;/h2&gt;<br>&lt;p&gt;如果您期望仅开启识别并获取识别结果（对话中禁止使用），可以在需要的时候调用下面的接口，可在回调中获取结果。&lt;/p&gt;<br>&lt;p&gt;(注：开启识别后，不能开启唤醒。 开启识别后对话结束即识别结束，若需要继续使用需重新开启)&lt;/p&gt;<br>&lt;h3 id=”1548336289483-32”&gt;1.14.1 开启识别&lt;/h3&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;startListener&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//获取识别实例<br>ASREngineManager *engine = <a href>[DDSManager shareInstance</a> getASRInstance];</p>
+<p>//开启识别<br><a href>engine startListening:self</a>;</p>
+<p>//实现识别回调<br>-(void) ASRBeginningOfSpeech{<br>NSLog(@”ASREngine 检测到用户开始说话”);<br>}</p>
+<p>-(void) ASREndOfSpeech{<br>NSLog(@”ASREngine 检测到用户结束说话”);<br>}</p>
+<p>-(void) ASRBufferReceived:(NSData *) buffer{<br>NSLog(@”ASREngine 用户说话的音频数据: %@”, buffer);<br>}</p>
+<p>-(void) ASRPartialResults:(NSString *) results{<br>NSLog(@”ASREngine 实时识别结果反馈: %@”, results);<br>}</p>
+<p>-(void) ASRFinalResults:(NSString *) results{<br>NSLog(@”ASREngine 最终识别结果反馈: %@”,  results);<br>}</p>
+<p>-(void)ASRError:(NSString*) error{<br>NSLog(@”ASREngine 识别过程中发生的错误: %@”, error);<br>}<br>-(void) ASRRmsChanged:(float)rmsdB{<br>NSLog(@”ASREngine 用户说话的音量分贝: %f”, rmsdB);<br>}<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-33”&gt;1.14.2 主动结束识别&lt;/h3&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;stopListener&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//获取识别实例<br>ASREngineManager *engine = <a href>[DDSManager shareInstance</a> getASRInstance];</p>
+<p>//主动结束此次识别<br><a href>engine stopListening</a>;<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-34”&gt;1.14.3 取消本次识别&lt;/h3&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;cancel&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//获取识别实例<br>ASREngineManager *engine = <a href>[DDSManager shareInstance</a> getASRInstance];</p>
+<p>//取消此次识别<br><a href>engine cancel</a>;&lt;/code&gt;&lt;/pre&gt;<br>&lt;h2 id=”1548336289483-35”&gt;1.15 TTS相关接口&lt;/h2&gt;<br>&lt;p&gt;发音人列表如下（仅供参考，以实际为准）：&lt;/p&gt;<br>&lt;table&gt;<br>&lt;thead&gt;<br>&lt;tr&gt;<br>&lt;th&gt;语言&lt;/th&gt;<br>&lt;th&gt;资源名&lt;/th&gt;<br>&lt;th&gt;说明&lt;/th&gt;<br>&lt;th&gt;云端是否支持SSML（本地不支持SSML&lt;/th&gt;<br>&lt;th&gt;是否支持本地&lt;/th&gt;<br>&lt;/tr&gt;<br>&lt;/thead&gt;<br>&lt;tbody&gt;<br>&lt;tr&gt;<br>&lt;td&gt;中文&lt;/td&gt;<br>&lt;td&gt;anonyf&lt;/td&gt;<br>&lt;td&gt;小妮，青年女声，普通话中文，英文混读；&lt;/td&gt;<br>&lt;td&gt;是&lt;/td&gt;<br>&lt;td&gt;否&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;中文&lt;/td&gt;<br>&lt;td&gt;qianranf&lt;/td&gt;<br>&lt;td&gt;小倩，女童声，普通话中文；英文混读；&lt;/td&gt;<br>&lt;td&gt;是&lt;/td&gt;<br>&lt;td&gt;否&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;中文&lt;/td&gt;<br>&lt;td&gt;hyanif&lt;/td&gt;<br>&lt;td&gt;小燕；纯中文；青年女声；&lt;/td&gt;<br>&lt;td&gt;是&lt;/td&gt;<br>&lt;td&gt;否&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;中文&lt;/td&gt;<br>&lt;td&gt;lzyinf&lt;/td&gt;<br>&lt;td&gt;小颖；纯中文；青年女声；&lt;/td&gt;<br>&lt;td&gt;是&lt;/td&gt;<br>&lt;td&gt;否&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;中文&lt;/td&gt;<br>&lt;td&gt;dlaf&lt;/td&gt;<br>&lt;td&gt;多拉爱梦;中英文；青年女声；&lt;/td&gt;<br>&lt;td&gt;是&lt;/td&gt;<br>&lt;td&gt;否&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;中文&lt;/td&gt;<br>&lt;td&gt;zhilingf&lt;/td&gt;<br>&lt;td&gt;林志玲，青年女声，普通话中文，英文混读；&lt;/td&gt;<br>&lt;td&gt;是&lt;/td&gt;<br>&lt;td&gt;是&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;中文&lt;/td&gt;<br>&lt;td&gt;anonyg&lt;/td&gt;<br>&lt;td&gt;小珍，女童声，普通话中文；&lt;/td&gt;<br>&lt;td&gt;否&lt;/td&gt;<br>&lt;td&gt;否&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;中文&lt;/td&gt;<br>&lt;td&gt;xijunm&lt;/td&gt;<br>&lt;td&gt;小军，青年男声，普通话中文，英文混读；&lt;/td&gt;<br>&lt;td&gt;是&lt;/td&gt;<br>&lt;td&gt;否&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;中文&lt;/td&gt;<br>&lt;td&gt;geyou&lt;/td&gt;<br>&lt;td&gt;葛优，青年男声，普通话中文；英文混读；&lt;/td&gt;<br>&lt;td&gt;是&lt;/td&gt;<br>&lt;td&gt;否&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;中文&lt;/td&gt;<br>&lt;td&gt;gdgm&lt;/td&gt;<br>&lt;td&gt;郭德纲；纯中文；青年男声；英文混读；&lt;/td&gt;<br>&lt;td&gt;是&lt;/td&gt;<br>&lt;td&gt;是&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;中文&lt;/td&gt;<br>&lt;td&gt;swkm&lt;/td&gt;<br>&lt;td&gt;孙悟空；纯中文；青年男声；&lt;/td&gt;<br>&lt;td&gt;否&lt;/td&gt;<br>&lt;td&gt;否&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;中文&lt;/td&gt;<br>&lt;td&gt;hbrinf&lt;/td&gt;<br>&lt;td&gt;快乐智慧 纯中文 童声女声&lt;/td&gt;<br>&lt;td&gt;是&lt;/td&gt;<br>&lt;td&gt;否&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;中文&lt;/td&gt;<br>&lt;td&gt;zxcm&lt;/td&gt;<br>&lt;td&gt;周星驰；纯中文；青年男声；&lt;/td&gt;<br>&lt;td&gt;是&lt;/td&gt;<br>&lt;td&gt;否&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;中文&lt;/td&gt;<br>&lt;td&gt;gqlanf&lt;/td&gt;<br>&lt;td&gt;纯中文；青年女声；英文混读；&lt;/td&gt;<br>&lt;td&gt;否&lt;/td&gt;<br>&lt;td&gt;否&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;中文&lt;/td&gt;<br>&lt;td&gt;lucyf&lt;/td&gt;<br>&lt;td&gt;lucy; 青年女声; 普通话中文,英文混读；&lt;/td&gt;<br>&lt;td&gt;是&lt;/td&gt;<br>&lt;td&gt;否&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;中文&lt;/td&gt;<br>&lt;td&gt;zzxiangm&lt;/td&gt;<br>&lt;td&gt;赵忠祥 纯中文 中年男声&lt;/td&gt;<br>&lt;td&gt;是&lt;/td&gt;<br>&lt;td&gt;否&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;/tbody&gt;<br>&lt;/table&gt;<br>&lt;h3 id=”1548336289483-36”&gt;1.15.1 设置发音人&lt;/h3&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;setSpeaker&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//获取TTS实例<br>TTSEngineManager * engine = <a href>[DDSManager shareInstance</a> getTTSInstance];</p>
+<p>//设置播报合成音,参考上面发音人列表<br><a href>engine setSpeaker:@”zhilingf”</a>;&lt;br /&gt;&lt;br /&gt;/<em>* &nbsp;</em> 设置TTS播报类型的接口<br>&nbsp;* 调用此接口则云端配置的合成音类型失效，此后的合成音类型都将由此接口来托管<br>&nbsp;* @param speaker 取值如：zhilingf, gdgm等<br>&nbsp;* @param resPath 合成资源的全路径: xxx/xxx/gdgm.bin<br>&nbsp;*/<br><a href>engine setSpeaker:@”xxx” withResPath:[self getResourcesFile:@”xxx/xxx.bin”</a>];<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-37”&gt;1.15.2 设置语速&lt;/h3&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;setSpeed&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//获取TTS实例<br>TTSEngineManager * engine = <a href>[DDSManager shareInstance</a> getTTSInstance];</p>
+<p>/*!<br> 设置TTS播报语速的接口,调用此接口则云端配置的合成音语速失效，此后的合成音语速都将由此接口来托管<br> @param speed 语速，取值0.5-2.0，0.5语速最快，2.0语速最慢。注意：如在控制台已调试好合成音语速speed，请先取倒数，再放到SDK中配置<br> */<br><a href>engine setSpeed:1.0</a>;<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-38”&gt;1.15.3 设置音量&lt;/h3&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;setVolume&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//获取TTS实例<br>TTSEngineManager * engine = <a href>[DDSManager shareInstance</a> getTTSInstance];</p>
+<p>/*!<br> 设置TTS播报音量的接口,调用此接口则云端配置的合成音音量失效，此后的合成音音量都将由此接口来托管<br> @param volume 音量大小，取值1-100<br> */<br><a href>engine setVolume:50</a>;<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-39”&gt;1.15.4 设置TTS模式&lt;/h3&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;setTTSMode&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//获取TTS实例<br>TTSEngineManager * engine = <a href>[DDSManager shareInstance</a> getTTSInstance];</p>
+<p>/*!<br> 设置TTS模式<br> @param mode 取值0 local TTS；取值1 cloud TTS<br> */<br><a href>engine setmode:1</a>;<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-40”&gt;1.15.5 获取发音人&lt;/h3&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;getSpeaker&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//获取TTS实例<br>TTSEngineManager * engine = <a href>[DDSManager shareInstance</a> getTTSInstance];</p>
+<p>//获取播报合成音<br>NSString * speaker = <a href>engine getSpeaker</a>;<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-41”&gt;1.15.6 获取语速&lt;/h3&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;getSpeed&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//获取TTS实例<br>TTSEngineManager * engine = <a href>[DDSManager shareInstance</a> getTTSInstance];</p>
+<p>//获取播报语速<br>float speed = <a href>engine getSpeed</a>;<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-42”&gt;1.15.7 获取音量&lt;/h3&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;getVolume&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//获取TTS实例<br>TTSEngineManager * engine = <a href>[DDSManager shareInstance</a> getTTSInstance];</p>
+<p>//获取播报音量<br>int volume = <a href>engine getVolume</a>;<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-43”&gt;1.15.8 暂停播报&lt;/h3&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;pausePlayer&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//获取TTS实例<br>TTSEngineManager * engine = <a href>[DDSManager shareInstance</a> getTTSInstance];</p>
+<p>//暂停播报<br><a href>engine pausePlayer</a>;<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-44”&gt;1.15.9 恢复播报&lt;/h3&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;resetPlayer&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//获取TTS实例<br>TTSEngineManager * engine = <a href>[DDSManager shareInstance</a> getTTSInstance];</p>
+<p>//恢复播报<br><a href>engine resetPlayer</a>;<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-45”&gt;1.15.10 语音播报&lt;/h3&gt;<br>&lt;p&gt;如果你仅仅想播报一段文本，可以通过使用以下方法来播报，但是该方法在对话时，禁止使用。&lt;/p&gt;<br>&lt;p&gt;text - 播报文本&lt;/p&gt;<br>&lt;p&gt;&lt;br /&gt;提供4个优先级播报：&lt;/p&gt;<br>&lt;p&gt;priority - 优先级&lt;/p&gt;<br>&lt;ul&gt;<br>&lt;li&gt;优先级0-保留，与aios语音交互同级，仅限内部使用；&lt;/li&gt;<br>&lt;li&gt;优先级1-正常，默认选项，同级按序播放；&lt;/li&gt;<br>&lt;li&gt;优先级2-重要，可以打断&lt;优先级1&gt;，同级按序播放；&lt;/li&gt;<br>&lt;li&gt;优先级3-紧急，可以打断&lt;优先级1|优先级2&gt;，同级按序播放。&lt;/li&gt;<br>&lt;/ul&gt;<br>&lt;p&gt;&lt;br /&gt;ttsId - 用于追踪该次播报的id，建议使用UUID。&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;tts&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;// 请求语音播报<br>//此接口在新版SDK已弃用，请使用下面的新接口<br>//<a href>[DDSManager shareInstance</a> speak:text  priority:priority ttsId:ttsId];</p>
+<p>//获取识别实例<br>TTSEngineManager * engine = <a href>[DDSManager shareInstance</a> getTTSInstance];</p>
+<p><a href>engine speak:text  priority:priority ttsId:ttsId</a>;</p>
+<p>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-46”&gt;1.15.11 停止语音播报&lt;/h3&gt;<br>&lt;p&gt;停止播报与speak接口可以配合使用，具体说明如下:&lt;/p&gt;<br>&lt;p&gt;1）与speak接口一样，在对话时，禁止使用；&lt;/p&gt;<br>&lt;p&gt;2）ttsId与speak接口的ttsId一致，则停止或者移除该播报；&lt;/p&gt;<br>&lt;p&gt;3）ttsId为@”all”， 停止所有播报。&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;tts&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;// 停止播报<br>//此接口在新版SDK已弃用，请使用下面的新接口<br>//<a href>[DDSManager shareInstance</a> shutup:ttsId];</p>
+<p>//获取TTS实例<br>TTSEngineManager * engine = <a href>[DDSManager shareInstance</a> getTTSInstance];</p>
+<p><a href>engine shutup:ttsId</a>;<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-47”&gt;1.15.12 TTS回调接口&lt;/h3&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;TTSEngineManager&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//获取TTS实例<br>TTSEngineManager * engine = <a href>[DDSManager shareInstance</a> getTTSInstance];</p>
+<p>//设置委托<br><a href>engine setTTSEngienManagerDelegate:self</a>;</p>
+<p>//实现TTS回调<br>-(void) TTSBeginning:(NSString<em>)ttsId{<br>NSLog(@”TTSEngine 开始播报: %@”, ttsId);<br>}<br>-(void) TTSReceived:(NSData</em>)data{<br>NSLog(@”TTSEngine 收到音频，此方法会回调多次，直至data为0，音频结束: %@”,data);<br>}</p>
+<p>-(void) TTSEnd:(NSString*)ttsId status:(int)status{<br>NSLog(@”TTSEngine TTS播报结束, ttsid: %@ status: %d”,ttsId, status);<br>}</p>
+<p>-(void) TTSError:(NSString*) error{<br>NSLog(@”TTSEngine 出现错误: %@”, error);<br>}</p>
+<p>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h3 id=”1548336289483-47”&gt;1.15.13 设置/获取自定义TTS播报录音的接口&lt;/h3&gt;<br>&lt;p style=”font-size: 14px;”&gt;&lt;em&gt;&lt;span style=”font-weight: 600;”&gt;setCustomAudio/getCustomAudio&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre style=”font-size: 11.899999618530273px;”&gt;&lt;code style=”font-size: 11.899999618530273px;”&gt;//设置自定义TTS播报录音的接口<br>NSMutableArray * array = <a href>[NSMutableArray alloc</a> init];<br>NSMutableDictionary * mp3Dic = <a href>[NSMutableDictionary alloc</a> init];<br>NSString * mp3Path = <a href>self getResourcesFile:@”zaine.mp3”</a>;<br><a href>mp3Dic setObject:@”我在，有什么可以帮你” forKey:@”name”</a>;<br><a href>mp3Dic setObject:@”mp3” forKey:@”type”</a>;<br><a href>mp3Dic setObject:mp3Path forKey:@”path”</a>;<br><a href>array addObject:mp3Dic</a>;<br><a href>[[DDSManager shareInstance</a> getTTSInstance] setCustomAudio:array];</p>
+<p>//获取自定义TTS播报录音的接口<br> NSArray <em>array = <a href>[[DDSManager shareInstance</a> getTTSInstance] getCustomAudio];&lt;/code&gt;&lt;/pre&gt;<br>&lt;h2 id=”1548336289483-48”&gt;1.16 设置对话模式&lt;/h2&gt;<br>&lt;p&gt;若产品中只添加本地技能，你可以通过以下接口强制使用本地对话管理，也可通过该接口切换为云端对话管理，接口参数如下：&lt;/p&gt;<br>&lt;p&gt;/</em>!&lt;/p&gt;<br>&lt;p&gt;设置对话模式&lt;/p&gt;<br>&lt;p&gt;@param mode 取值：1，本地对话管理；取值2，云端对话管理&lt;/p&gt;<br>&lt;p&gt;*/&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;setDilaogMode&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;//设置本地对话管理<br><a href>[DDSManager shareInstance</a> setDialogMode:1];</p>
+<p>//设置云端对话管理<br><a href>[DDSManager shareInstance</a> setDialogMode:2];<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h2 id=”1548336289483-49”&gt;1.17 按键事件&lt;/h2&gt;<br>&lt;p&gt;如果您有相关的软硬件按键，您需要关注以下接口，将用户的行为反馈给SDK。但是avatarPress/avatarRelease两个接口要求产品不能开启VAD（VAD在创建产品时可配置）。&lt;/p&gt;<br>&lt;p&gt;&lt;em&gt;&lt;strong&gt;avatar&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;<br>&lt;pre&gt;&lt;code&gt;// 点击唤醒/停止识别/打断播报 操作接口<br><a href>[DDSManager shareInstance</a> avatarClick];<br>// 点击唤醒/停止识别/打断播报 操作接口 , 并附带一则欢迎语，当此次是唤醒时，播报这则欢迎语<br><a href>[DDSManager shareInstance</a> avatarClick:@”欢迎来到DUI世界”];</p>
+<p>// 按下按键接口，可以说话<br><a href>[DDSManager shareInstance</a> avatarPress];</p>
+<p>// 释放按键接口，停止说话<br><a href>[DDSManager shareInstance</a> avatarRelease];<br>&lt;/code&gt;&lt;/pre&gt;<br>&lt;h1 id=”1548336289483-50”&gt;二、高级配置项&lt;/h1&gt;<br>&lt;h2 id=”1548336289483-51”&gt;2.1 录音配置项&lt;/h2&gt;<br>&lt;table&gt;<br>&lt;thead&gt;<br>&lt;tr&gt;<br>&lt;th&gt;参数名&lt;/th&gt;<br>&lt;th&gt;取值&lt;/th&gt;<br>&lt;th&gt;说明&lt;/th&gt;<br>&lt;th&gt;是否必须&lt;/th&gt;<br>&lt;th&gt;默认值&lt;/th&gt;<br>&lt;/tr&gt;<br>&lt;/thead&gt;<br>&lt;tbody&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_RECORDER_MODE&lt;/td&gt;<br>&lt;td&gt;字符串&lt;br /&gt;external/internal&lt;/td&gt;<br>&lt;td&gt;录音机模式：external（使用外置录音机，需主动调用拾音接口）&lt;br /&gt;internal（使用内置录音机，DDS自动录音）&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;internal&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_AEC_MODE&lt;/td&gt;<br>&lt;td&gt;字符串&lt;br /&gt;external&lt;/td&gt;<br>&lt;td&gt;AEC模式：&lt;br /&gt;external（DDS会认为宿主设备已经完成了AEC回声消除，选择默认模组也可以支持唤醒打断&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;N/A&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;/tbody&gt;<br>&lt;/table&gt;<br>&lt;h2 id=”1548336289483-52”&gt;2.2 TTS配置项&lt;/h2&gt;<br>&lt;table&gt;<br>&lt;thead&gt;<br>&lt;tr&gt;<br>&lt;th&gt;参数名&lt;/th&gt;<br>&lt;th&gt;取值&lt;/th&gt;<br>&lt;th&gt;说明&lt;/th&gt;<br>&lt;th&gt;是否必须&lt;/th&gt;<br>&lt;th&gt;默认值&lt;/th&gt;<br>&lt;/tr&gt;<br>&lt;/thead&gt;<br>&lt;tbody&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_CUSTOM_TIPS&lt;/td&gt;<br>&lt;td&gt;json字符串&lt;/td&gt;<br>&lt;td&gt;自定义错误播放的内容，如{&lt;br /&gt;“71304”:”这是识别结果为空的自定义播报”,&lt;br /&gt;“71305”:”这是语义结果为空的自定义播报”,&lt;br /&gt;“71308”:”这是进入闲聊技能的自定义播报”,&lt;br /&gt;“713<strong>“:”***</strong>“&lt;br /&gt;}&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;内置&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_TTS_MODE&lt;/td&gt;<br>&lt;td&gt;字符串 external/internal&lt;/td&gt;<br>&lt;td&gt;TTS模式：&lt;br /&gt;external（使用外置TTS引擎，需主动注册TTS请求监听器）&lt;br /&gt;internal（使用内置DUI TTS引擎）&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;internal&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_TTS_CACHE&lt;/td&gt;<br>&lt;td&gt;字符串 false/true&lt;/td&gt;<br>&lt;td&gt;TTS缓存路是否开启&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;false&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_CACHE_COUNT&lt;/td&gt;<br>&lt;td&gt;整型&lt;/td&gt;<br>&lt;td&gt;TTS缓存音频数目&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;100&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_CUSTOM_AUDIO&lt;/td&gt;<br>&lt;td&gt;json串&lt;/td&gt;<br>&lt;td&gt;自定义音频文件，替代TTS合成，如:&lt;br /&gt;<a href>{&lt;br /&gt;“name”: “我在，有什么可以帮你”,&lt;br /&gt;“type”: “pcm”,&lt;br /&gt;“path”: “/var/containers/Bundle/Application/816D8F91-A7F5-4159-8BEC-D3E40123F755/ddsiosDemo.app/nhxc.pcm”&lt;br /&gt;}, {&lt;br /&gt;“name”: “开始为您播放”,&lt;br /&gt;“type”: “mp3”,&lt;br /&gt;“path”: “/var/containers/Bundle/Application/816D8F91-A7F5-4159-8BEC-D3E40123F755/ddsiosDemo.app/nhxhua.mp3”&lt;br /&gt;}, {&lt;br /&gt;“name”: “为您播放”,&lt;br /&gt;“type”: “wav”,&lt;br /&gt;“path”: “/var/containers/Bundle/Application/816D8F91-A7F5-4159-8BEC-D3E40123F755/ddsiosDemo.app/xiaole.wav”&lt;br /&gt; }</a>&lt;br /&gt;其中type-&gt;音频格式(pcm/wav/mp3)；name-&gt;替代合成的文本；path-&gt;音频的路径&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;N/A&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;/tbody&gt;<br>&lt;/table&gt;<br>&lt;h2 id=”1548336289483-53”&gt;2.3 识别配置项&lt;/h2&gt;<br>&lt;table&gt;<br>&lt;thead&gt;<br>&lt;tr&gt;<br>&lt;th&gt;参数名&lt;/th&gt;<br>&lt;th&gt;取值&lt;/th&gt;<br>&lt;th&gt;说明&lt;/th&gt;<br>&lt;th&gt;是否必须&lt;/th&gt;<br>&lt;th&gt;默认值&lt;/th&gt;<br>&lt;/tr&gt;<br>&lt;/thead&gt;<br>&lt;tbody&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_VAD_TIMEOUT&lt;/td&gt;<br>&lt;td&gt;数值型字符串，毫秒&lt;/td&gt;<br>&lt;td&gt;VAD静音检测超时时间，默认8000毫秒&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;8000&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_ASR_ENABLE_PUNCTUATION&lt;/td&gt;<br>&lt;td&gt;字符串，true/false&lt;/td&gt;<br>&lt;td&gt;识别结果是否带标点符号&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;false&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_ASR_ROUTER&lt;/td&gt;<br>&lt;td&gt;字符串，partner/dialog&lt;/td&gt;<br>&lt;td&gt;识别路由：&lt;br /&gt;partner（将识别结果传递给partner，不会主动进入对话）&lt;br /&gt;dialog（将识别结果传递给dui，会主动进入对话）&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;dialog&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_ASR_ENABLE_TONE&lt;/td&gt;<br>&lt;td&gt;字符串，true/false&lt;/td&gt;<br>&lt;td&gt;识别结果的拼音是否带音调&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;false&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_AUDIO_COMPRESS&lt;/td&gt;<br>&lt;td&gt;字符串，speex/opus/false&lt;/td&gt;<br>&lt;td&gt;是否开启音频压缩,配置为opus则使用第三方引擎接口feedOpus&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;speex&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_ASR_TIPS&lt;/td&gt;<br>&lt;td&gt;字符串，true/false&lt;/td&gt;<br>&lt;td&gt;识别完成是否播报提示音&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;false&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;/tbody&gt;<br>&lt;/table&gt;<br>&lt;h2 id=”1548336289483-54”&gt;2.4 唤醒配置项&lt;/h2&gt;<br>&lt;table&gt;<br>&lt;thead&gt;<br>&lt;tr&gt;<br>&lt;th&gt;参数名&lt;/th&gt;<br>&lt;th&gt;取值&lt;/th&gt;<br>&lt;th&gt;说明&lt;/th&gt;<br>&lt;th&gt;是否必须&lt;/th&gt;<br>&lt;th&gt;默认值&lt;/th&gt;<br>&lt;/tr&gt;<br>&lt;/thead&gt;<br>&lt;tbody&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_WAKEUP_ROUTER&lt;/td&gt;<br>&lt;td&gt;字符串，partner/dialog&lt;/td&gt;<br>&lt;td&gt;唤醒路由：&lt;br /&gt;partner（将唤醒结果传递给partner，不会主动进入对话）&lt;br /&gt;dialog（将唤醒结果传递给dui，会主动进入对话）&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;dialog&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_ONESHOT_MIDTIME&lt;br /&gt;K_ONESHOT_ENDTIME&lt;/td&gt;<br>&lt;td&gt;数值型字符串，毫秒&lt;/td&gt;<br>&lt;td&gt;OneShot配置：&lt;br /&gt;1.若MIDTIME=0&amp;ENDTIME=0，唤醒后进入识别；若VAD检测超时，则直接退出对话&lt;br /&gt;2.若MIDTIME=0&amp;ENDTIME!=0，唤醒后进入识别；若ENDTIME超时，则直接退出对话&lt;br /&gt;3.若MIDTIME!=0&amp;ENDTIME=0，唤醒后进入识别；若MIDTIME超时，则播放欢迎语，继续识别&lt;br /&gt;4.若MIDTIME!=0&amp;ENDTIME!=0，唤醒后进入识别；若MIDTIME超时，则播放欢迎语，继续识别；若ENDTIME超时，则直接退出对话&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;500&lt;br /&gt;2000&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;/tbody&gt;<br>&lt;/table&gt;<br>&lt;h2 id=”1548336289483-55”&gt;2.5 调试配置项&lt;/h2&gt;<br>&lt;table&gt;<br>&lt;thead&gt;<br>&lt;tr&gt;<br>&lt;th&gt;参数名&lt;/th&gt;<br>&lt;th&gt;取值&lt;/th&gt;<br>&lt;th&gt;说明&lt;/th&gt;<br>&lt;th&gt;是否必须&lt;/th&gt;<br>&lt;th&gt;默认值&lt;/th&gt;<br>&lt;/tr&gt;<br>&lt;/thead&gt;<br>&lt;tbody&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_CACHE_PATH&lt;/td&gt;<br>&lt;td&gt;字符串&lt;/td&gt;<br>&lt;td&gt;调试信息保存路径&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;沙盒目录&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_WAKEUP_DEBUG&lt;/td&gt;<br>&lt;td&gt;字符串true/false&lt;/td&gt;<br>&lt;td&gt;将会自动保存唤醒音频&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;无&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_VAD_DEBUG&lt;/td&gt;<br>&lt;td&gt;字符串true/false&lt;/td&gt;<br>&lt;td&gt;将会自动保存VAD音频&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;无&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_ASR_DEBUG&lt;/td&gt;<br>&lt;td&gt;字符串true/false&lt;/td&gt;<br>&lt;td&gt;将会自动保存ASR音频&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;无&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;K_TTS_DEBUG&lt;/td&gt;<br>&lt;td&gt;字符串true/false&lt;/td&gt;<br>&lt;td&gt;将会自动保存TTS音频&lt;/td&gt;<br>&lt;td&gt;非必须&lt;/td&gt;<br>&lt;td&gt;无&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;/tbody&gt;<br>&lt;/table&gt;<br>&lt;h1 id=”1548336289483-56”&gt;三、错误码描述&lt;/h1&gt;<br>&lt;table&gt;<br>&lt;thead&gt;<br>&lt;tr&gt;<br>&lt;th&gt;error id&lt;/th&gt;<br>&lt;th&gt;错误描述&lt;/th&gt;<br>&lt;th&gt;原因及解决办法&lt;/th&gt;<br>&lt;/tr&gt;<br>&lt;/thead&gt;<br>&lt;tbody&gt;<br>&lt;tr&gt;<br>&lt;td&gt;1&lt;/td&gt;<br>&lt;td&gt;解压dds.bin失败&lt;/td&gt;<br>&lt;td&gt;系统IO错误&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;2&lt;/td&gt;<br>&lt;td&gt;内核执行出错&lt;/td&gt;<br>&lt;td&gt;请检查配置是否正确，或者联系DUI客服&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;3&lt;/td&gt;<br>&lt;td&gt;系统启动超时&lt;/td&gt;<br>&lt;td&gt;请检查配置是否正确，或者联系DUI客服&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;4&lt;/td&gt;<br>&lt;td&gt;存储空间不足&lt;/td&gt;<br>&lt;td&gt;系统存储空间不足&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;5&lt;/td&gt;<br>&lt;td&gt;&lt;span style=”font-family: Arial, sans-serif;”&gt;内部节点异常退出&lt;/span&gt;&lt;/td&gt;<br>&lt;td&gt;&lt;span style=”font-family: Arial, sans-serif;”&gt;重启DDS SDK&lt;/span&gt;&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070302&lt;/td&gt;<br>&lt;td&gt;解码失败&lt;/td&gt;<br>&lt;td&gt;联系DUI客服&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070303&lt;/td&gt;<br>&lt;td&gt;未发现新的版本&lt;/td&gt;<br>&lt;td&gt;略&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070304&lt;/td&gt;<br>&lt;td&gt;请先升级您的客户端（SDK）&lt;/td&gt;<br>&lt;td&gt;因为产品选择的dui内核和sdk不匹配，需要升级sdk&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070305&lt;/td&gt;<br>&lt;td&gt;网络异常, 无法连接至服务器&lt;/td&gt;<br>&lt;td&gt;请检查网络是否正常或者配置是否正确&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070306&lt;/td&gt;<br>&lt;td&gt;解码失败&lt;/td&gt;<br>&lt;td&gt;联系DUI客服&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070307&lt;/td&gt;<br>&lt;td&gt;补丁安装失败&lt;/td&gt;<br>&lt;td&gt;存储空间不够&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070308&lt;/td&gt;<br>&lt;td&gt;备份压缩文件不存在&lt;/td&gt;<br>&lt;td&gt;用户手动删掉了app私有空间的文件&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070309&lt;/td&gt;<br>&lt;td&gt;提取压缩文件失败&lt;/td&gt;<br>&lt;td&gt;存储空间不够&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070310&lt;/td&gt;<br>&lt;td&gt;未设置产品ID&lt;/td&gt;<br>&lt;td&gt;需要设置产品id&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070311&lt;/td&gt;<br>&lt;td&gt;无效客户端版本&lt;/td&gt;<br>&lt;td&gt;请检查配置是否正确&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070312&lt;/td&gt;<br>&lt;td&gt;无效用户ID&lt;/td&gt;<br>&lt;td&gt;&lt;span style=”font-family: Arial, sans-serif; background-color: #ffffff;”&gt;需要设置用户id&lt;/span&gt;&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070313&lt;/td&gt;<br>&lt;td&gt;无效设备ID&lt;/td&gt;<br>&lt;td&gt;设备id不正确&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070314&lt;/td&gt;<br>&lt;td&gt;资源地址无效&lt;/td&gt;<br>&lt;td&gt;请检查配置是否正确&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070315&lt;/td&gt;<br>&lt;td&gt;无效的产品分支&lt;/td&gt;<br>&lt;td&gt;需要设置产品分支&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070316&lt;/td&gt;<br>&lt;td&gt;无法找到资源&lt;/td&gt;<br>&lt;td&gt;服务端资源生成有问题，请尝试重新发布一下，或者请提供产品id反馈给DUI客服，去后台查询根本原因&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070317&lt;/td&gt;<br>&lt;td&gt;资源校验失败&lt;/td&gt;<br>&lt;td&gt;下载资源过程中资源被纂改&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070319&lt;/td&gt;<br>&lt;td&gt;当前产品中内核资源版本过低，请前往DUI控制台对应的产品中，选择最新的内核资源版本并重新发布产品&lt;/td&gt;<br>&lt;td&gt;当前产品中内核资源版本过低，请前往DUI控制台对应的产品中，选择最新的内核资源版本并重新发布产品。&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070601&lt;/td&gt;<br>&lt;td&gt;network abnormal, can not connect to auth server&lt;/td&gt;<br>&lt;td&gt;设备注册过程中无法连接到授权服务器，请检查网络是否畅通，或者productId与api key是否匹配&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070602&lt;/td&gt;<br>&lt;td&gt;can not get valid profile&lt;/td&gt;<br>&lt;td&gt;设备注册过程无法颁发有效的profile文件，请与客服联联系&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070603&lt;/td&gt;<br>&lt;td&gt;invalid api key&lt;/td&gt;<br>&lt;td&gt;无效的api key，请到产品授权配置页面查看api key信息是否正确,iOS平台请确认BundleId是否匹配&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070604&lt;/td&gt;<br>&lt;td&gt;Invalid product id&lt;/td&gt;<br>&lt;td&gt;无效的产品ID，请到产品信息中查看&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070605&lt;/td&gt;<br>&lt;td&gt;read profile file failed&lt;/td&gt;<br>&lt;td&gt;读取profile文件失败，请检查文件系统是否异常或重新进行设备注册&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070606&lt;/td&gt;<br>&lt;td&gt;profile file is disabled&lt;/td&gt;<br>&lt;td&gt;profile文件被禁用，请重新进行注册&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070607&lt;/td&gt;<br>&lt;td&gt;profile file is expired&lt;/td&gt;<br>&lt;td&gt;profile文件过期，请重新进行注册&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070608&lt;/td&gt;<br>&lt;td&gt;profile file is illegal for this device&lt;/td&gt;<br>&lt;td&gt;profile文件非法，请联系客服&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070609&lt;/td&gt;<br>&lt;td&gt;can not save profile&lt;/td&gt;<br>&lt;td&gt;设备注册无法保存有效的profile文件，检查文件系统是否异常或者重新进行设备注册&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070610&lt;/td&gt;<br>&lt;td&gt;profile file is illegal for this productId&lt;/td&gt;<br>&lt;td&gt;productId与api key不匹配&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070612&lt;/td&gt;<br>&lt;td&gt;dns resolve failed: no answers&lt;/td&gt;<br>&lt;td&gt;DNS失败，请检查网络是否畅通&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070613&lt;/td&gt;<br>&lt;td&gt;dns resolve failed: exceed retry count&lt;/td&gt;<br>&lt;td&gt;DNS失败，请检查网络是否畅通&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070614&lt;/td&gt;<br>&lt;td&gt;dns resolve failed: network is unreachable&lt;/td&gt;<br>&lt;td&gt;DNS失败，请检查网络是否畅通&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070615&lt;/td&gt;<br>&lt;td&gt;dns resolve timeout&lt;/td&gt;<br>&lt;td&gt;DNS超时，请检查网络是否畅通&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070616&lt;/td&gt;<br>&lt;td&gt;connect ip failed: reasons for uncertainty&lt;/td&gt;<br>&lt;td&gt;建立连接失败，请检查网络是否畅通&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070617&lt;/td&gt;<br>&lt;td&gt;connect ip failed: network is unreachable&lt;/td&gt;<br>&lt;td&gt;建立连接失败，请检查网络是否畅通&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070618&lt;/td&gt;<br>&lt;td&gt;connect ip timeout&lt;/td&gt;<br>&lt;td&gt;建立连接超时，请检查网络是否畅通&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070619&lt;/td&gt;<br>&lt;td&gt;websocket handshake failed: reasons for uncertainty&lt;/td&gt;<br>&lt;td&gt;websocket握手失败，请检查网络是否畅通&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070620&lt;/td&gt;<br>&lt;td&gt;recv timeout&lt;/td&gt;<br>&lt;td&gt;接收超时，请检查网络是否畅通&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070621&lt;/td&gt;<br>&lt;td&gt;send timeout&lt;/td&gt;<br>&lt;td&gt;发送超时，请检查网络是否畅通&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;070622&lt;/td&gt;<br>&lt;td&gt;orderly shutdown&lt;/td&gt;<br>&lt;td&gt;请检查网络是否畅通&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071301&lt;/td&gt;<br>&lt;td&gt;TTS合成超时&lt;/td&gt;<br>&lt;td&gt;请检查网络是否正常&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071302&lt;/td&gt;<br>&lt;td&gt;对话超时&lt;/td&gt;<br>&lt;td&gt;请检查网络是否正常&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071303&lt;/td&gt;<br>&lt;td&gt;对话连接断开&lt;/td&gt;<br>&lt;td&gt;请检查网络是否正常&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071304&lt;/td&gt;<br>&lt;td&gt;识别结果为空&lt;/td&gt;<br>&lt;td&gt;未检测到用户说法&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071305&nbsp;&lt;/td&gt;<br>&lt;td&gt;语义结果为空&lt;/td&gt;<br>&lt;td&gt;用户的说法没有命中产品中的非闲聊技能&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071306&lt;/td&gt;<br>&lt;td&gt;WebAPI错误&lt;/td&gt;<br>&lt;td&gt;调用WebAPI时发生错误&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071307&lt;/td&gt;<br>&lt;td&gt;NativeAPI错误&lt;/td&gt;<br>&lt;td&gt;调用NativeAPI时发生错误&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071308&lt;/td&gt;<br>&lt;td&gt;进入闲聊技能&lt;/td&gt;<br>&lt;td&gt;用户的首轮说法没有命中产品中的非闲聊技能&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071309&lt;/td&gt;<br>&lt;td&gt;异常重试达到最大次数&lt;/td&gt;<br>&lt;td&gt;达到了产品错误处理的最大重试次数&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071310&lt;/td&gt;<br>&lt;td&gt;命中退出词&lt;/td&gt;<br>&lt;td&gt;用户说了产品的退出词&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071311&lt;/td&gt;<br>&lt;td&gt;NativeAPI未注册&lt;/td&gt;<br>&lt;td&gt;请检测是否注册并实现NativeAPI&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071312&lt;/td&gt;<br>&lt;td&gt;本地识别结果置信度低&lt;/td&gt;<br>&lt;td&gt;网络离线时本地识别结果置信度较低&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071313&lt;/td&gt;<br>&lt;td&gt;自定义技能响应超时&lt;/td&gt;<br>&lt;td&gt;联系技能开发者&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071314&lt;/td&gt;<br>&lt;td&gt;自定义技能内部错误&lt;/td&gt;<br>&lt;td&gt;联系技能开发者&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071315&lt;/td&gt;<br>&lt;td&gt;自定义技能返回为空&lt;/td&gt;<br>&lt;td&gt;联系技能开发者&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071316&lt;/td&gt;<br>&lt;td&gt;当前场景下不支持这么说&lt;/td&gt;<br>&lt;td&gt;该技能须要关闭智能调度&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071317&lt;/td&gt;<br>&lt;td&gt;进入兜底技能&lt;/td&gt;<br>&lt;td&gt;用户说法进入了产品中的兜底技能&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071318&lt;/td&gt;<br>&lt;td&gt;进入知识型技能&lt;/td&gt;<br>&lt;td&gt;用户说法进入了产品中的知识型技能&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;071300&lt;/td&gt;<br>&lt;td&gt;对话服务内部错误&lt;/td&gt;<br>&lt;td&gt;联系DUI客服&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;072101&lt;/td&gt;<br>&lt;td&gt;ASREngine VAD超时&lt;/td&gt;<br>&lt;td&gt;超过8s未检测到人声&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;072102&lt;/td&gt;<br>&lt;td&gt;ASREngine 识别为空&lt;/td&gt;<br>&lt;td&gt;未检测到用户说法&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;072103&lt;/td&gt;<br>&lt;td&gt;ASREngine 识别服务超时&lt;/td&gt;<br>&lt;td&gt;请检查网络是否正常&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;072104&lt;/td&gt;<br>&lt;td&gt;ASREngine 识别过程发生错误&lt;/td&gt;<br>&lt;td&gt;联系DUI客服&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;072201&lt;/td&gt;<br>&lt;td&gt;唤醒词个数超过限制&lt;/td&gt;<br>&lt;td&gt;请清除之前的唤醒词后重试&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;/tbody&gt;<br>&lt;/table&gt;<br>&lt;h1 id=”1548336289483-57”&gt;四、集成帮助文档&lt;/h1&gt;<br>&lt;p&gt;使用浏览器打开headerDoc下的masterTOC.html文件。&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</p>
+
+                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2020/04/28/随手-突然发现Blog没动，没坚持。/" data-toggle="tooltip" data-placement="top" title="[随手]突然发现Blog没动，没坚持。">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2019/07/30/Objective-C-Json转ObjectiveC的对象/" data-toggle="tooltip" data-placement="top" title="[Objective-C] Json转ObjectiveC的对象 ">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <!-- duoshuo Share start -->
+                
+                <!-- 多说 Share end-->
+
+                <!-- 多说评论框 start -->
+                
+                <!-- 多说评论框 end -->
+
+                <!-- disqus comment start -->
+                
+                    <div class="comment">
+                        <div id="disqus_thread" class="disqus-thread"></div>
+                    </div>
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<!-- disqus embedded js code start (one page only need to embed once) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "your-disqus-ID";
+    var disqus_identifier = "http://yoursite-url/2019/09/25/-!DOCTYPE html/";
+    var disqus_url = "http://yoursite-url/2019/09/25/-!DOCTYPE html/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus embedded js code start end -->
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/Xiaxiaer">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Nianxin Xia 2020 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://beantech.org">BeanTech</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yoursite-url/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="http://yoursite-url/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
